@@ -1,0 +1,14 @@
+html{font-size: 62.5%;}
+.wrap{width: 100%;}
+.inner{width: 90%; max-width: 1400px; margin: auto; height: inherit; background: rgba(255,255,255,.5);}
+header{height: 100px; background: rgb(241, 241, 227);}
+nav{height: 100px; background: #eea358;}
+.banner{height: 1703px; background: #ee9337;}
+main{height: 3500px;}
+section:nth-child(1){height: 1000px; background: #e2ee37;}
+section:nth-child(2){height: 1000px; background: #f4faa4;}
+section:nth-child(3){height: 500px; background: #e2ee37;}
+section:nth-child(4){height: 1000px; background: #f4faa4;}
+footer{height: 580px; background: #f6b0ab;}
+.footer_nav{height: 290px; background: #f5938c;}
+.footer_info{height: 290px; background: #f55f55;}
