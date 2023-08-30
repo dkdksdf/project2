@@ -47,6 +47,7 @@ main .s2 h2{font-size: 10rem; text-align: center;}
 main .s3{background: url(../images/alfred-kenneally-Zm_pIwr1w1Y-unsplash.jpg);}
 main .s3 .any{background: #9f3f3f;}
 main .row{display: flex; position: relative;}
-main .news_con{flex: 0 1 14rem; height: 14rem; position: absolute;}
-main .textbox { flex: 0 1 auto; position: absolute; right: 0;}
+main .news_con{position: absolute; flex-direction: row; flex-flow: row;}
+main .right {position: absolute; right: 0; flex-direction: column;}
+main .textbox span{display: flex; flex-direction: column;}
 
