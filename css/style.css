@@ -1,13 +1,10 @@
 html{font-size: 62.5%;}
 .wrap{width: 100%;}
 .fx{display: flex;}
-main{height: 3500px;}
-main section:nth-child(2){height: 200px; background: #f4faa4;}
-main section:nth-child(3){height: 500px; background: #e2ee37;}
-main section:nth-child(4){height: 1000px; background: #f4faa4;}
-footer{height: 580px; background: #f6b0ab;}
-.footer_nav{height: 290px; background: #f5938c;}
-.footer_info{height: 290px; background: #f55f55;}
+
+
+
+
 
 .popup h2{position: fixed; width: 50rem; height: 30rem; background: var(--background); color: #ee9337; font-size: 1rem; top: 50%; left: 35%;}
 
