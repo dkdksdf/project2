@@ -15,30 +15,25 @@ ul {
 }
 
 header {
+    padding: 0 10rem;
     height: 100px;
+    justify-content: center;
     line-height: 100px;
-    position: relative;
+    display: flex;
 }
 
-.logo {
-    position: absolute;
-    top: 10px;
+.logo img {
+    width: 80%;
+    vertical-align: middle;    
 }
 
-.sns {
-    right: 117px;
-}
+
 
 .sns_section {
-    position: absolute;
+    min-width: 20rem;
     display: flex;
     justify-content: space-between;
-    top: 1.875rem;
-    right: 1.875rem;
-    z-index: 30;
-    width: auto;
-    border-bottom: 0;
-    border-bottom: none;
+    align-items: center;
 }
 
 .sns_list {
@@ -67,7 +62,6 @@ header {
 /* nav */
 nav {
     width: 100%;
-    background: var(--background);
 }
 
 nav::before {
@@ -125,52 +119,29 @@ header:hover :before {
 
 
 /* 배너 */
-.banner .slide {    
-    height: 100vh;
+.banner .slide {
+    
 }
 
-.banner .slide_wrap {    
-    display: flex;
-}
-
-.banner .slide_wrap li {
-    position: absolute;
+.bx-controls-direction{display: none;}
+.bx-pager{display: none;}
+.banner .slide_wrap img{
     width: 100%;
-    height: 100%;
-    opacity: 1;
-    background: #fff no-repeat center center/cover;
-    transition: all 0.3s ease-in-out;
+    height: calc(100vh - 100px);
 }
-
-.banner .slide_wrap li.slide1 {
-    background: url(../images/eleonora-gaini-xom4ykz-WIg-unsplash.jpg);
-}
-
-.banner .slide_wrap li.slide2 {
-    background: url(../images/kuno-schweizer-kEtPOggwBl0-unsplash.jpg);
-}
-
-.banner .slide_wrap li.slide3 {
-    background: url(../images/the-cleveland-museum-of-art-z1L9sQPtroE-unsplash.jpg);
-}
-
-.banner .slide_wrap li.slide4 {
-    background: url(../images/nati-melnychuk-cCnDAkIDJ98-unsplash.jpg);
-}
-
 
 /* 메인 */
 main .s1 {
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -2px;
 }
 
 
 main .s1 .selectomenu1 {
     width: 100%;
-    height: 500px;
     color: #fff;
     background: url(../images/c-signature-bg-1.jpg) no-repeat center center/cover;
     padding: 10rem;
@@ -179,33 +150,34 @@ main .s1 .selectomenu1 {
 main .s1 .selectomenu1 h2 {
     font-size: 7rem;
     font-weight: bold;
-    /* margin-top: -76px; */
+}
+
+main .s1 .selectomenu1 ul {
+    margin-top: 40px;
 }
 
 main .s1 .selectomenu1 ul li a {
     color: #fff;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
+    line-height: 7rem;
+
 }
 
 main .s1 .selectomenu2 {
     width: 100%;
-    height: 500px;
+    padding: 14rem 10rem;
     background: var(--background);
 }
 
 main .s1 .selectomenu2 h2 {
     font-size: 4rem;
     font-weight: bold;
-    text-align: center;
-    align-items: center;
-    padding: 0.5rem;
 }
 
 main .s1 .selectomenu2 p {
     font-size: 2rem;
-    text-align: center;
-    padding: 0.5rem;
+    margin-top: 40px;
 }
 
 main .s1 .selectomenu2 .cf_img_box1 {
@@ -213,7 +185,7 @@ main .s1 .selectomenu2 .cf_img_box1 {
 }
 
 main .s1 .selectomenu2 .cf_img img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     flex-direction: column;
 }
@@ -234,48 +206,72 @@ main .s1 .selectomenu2 .cf_img img {
 main .s1 .selectomenu2 .cf_img_box2 {
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 2rem 1rem;
+    padding: 2rem 0;
 }
 
 main .s1 .selectomenu2 .cf_img_box3 {
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 2rem 1rem;
+    /* padding: 2rem 2rem 1rem; */
+    padding: 2rem 0;
 }
 
 main .s1 .selectomenu2 .cf_img_box4 {
     display: flex;
     justify-content: space-evenly;
-    padding: 2rem 2rem 1rem;
+    /* padding: 2rem 2rem 1rem; */
+    padding: 2rem 0;
 }
 
-.cf_img_box2 li a {
-    display: block;
+.topping{
+    width: 100%;
+}
+
+.topping p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+main .s1 .selectomenu2 .cf_img_box5 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+.cf_img_box5{width: 80%;}
+
+.cf_img_box5 li a {
+    display: flex;
+    flex-direction: column;    
     text-align: center;
+    align-items: center;
 }
 
-.cf_img_box2 li a .syreop {
-    width: 3.2rem;
-    height: 3.2rem;
+.cf_img_box5 li a .syreop {
+    width: 3rem;
+    height: 3rem;
     background: no-repeat center center/cover;
-    padding: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
 }
 
-.cf_img_box2 li:nth-child(1) a .syreop {
+.cf_img_box5 li:nth-child(1) a .syreop {
     background-image: url(../images/c-topping-01.png);
 }
 
-.cf_img_box2 li:nth-child(2) a .syreop {
+.cf_img_box5 li:nth-child(2) a .syreop {
     background-image: url(../images/c-topping-02.png);
 }
 
-.cf_img_box2 li:nth-child(3) a .syreop {
+.cf_img_box5 li:nth-child(3) a .syreop {
     background-image: url(../images/c-topping-03.png);
 }
 
-.cf_img_box2 li:nth-child(4) a .syreop {
+.cf_img_box5 li:nth-child(4) a .syreop {
     background-image: url(../images/c-topping-04.png);
 }
+
 
 
 
@@ -286,17 +282,14 @@ main .s2 h2 {
     padding: 1rem;
 }
 
-main .s3 .cf_img {
-    position: relative;
-    width: 100%;
-    height: 500px;
+main .s3 .cf_img {    
+    background: url(../images/m-3rd_sec-bg.jpg);   
+    height: 100vh;
+    max-width: 100%;
+   background-size: cover ;    
 }
 
-main .s3 .cf_img img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+
 
 
 
@@ -305,11 +298,12 @@ main .row {
     position: relative;
     width: 100%;
     height: 490px;
+    border: 1px solid #d7d5d5;
 }
 
 main .row .left {
-    width: 40%;
-    border: 1px solid #d7d5d5;
+    width: 40%;    
+    border-right: 1px solid #d7d5d5;
 }
 
 main .row .left h2 {
@@ -322,14 +316,20 @@ main .row .left h2 {
 
 main .row .right {
     position: absolute;
-    right: 0;
-    flex-direction: column;
-    width: 60%;
-    height: 490px;
+    right: 0;   
+    width: 60%; 
+    padding: 1rem 0;  
 }
 
-main .row .right .textbox {
-    border: 1px solid #d7d5d5;
+main .row .right .textbox1 {
+    height: 163px;
+    display: flex;
+    flex-direction: column;
+}
+main .row .right .textbox2 {
+    height: 163px;
+    display: flex;
+    flex-direction: column;
 }
 
 main .textbox span {
@@ -468,4 +468,5 @@ footer .fx .mid li:not(:last-child):before {
     font-size: 1rem;
     top: 50%;
     left: 35%;
+    display: none;
 }
