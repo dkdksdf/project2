@@ -24,7 +24,7 @@ header {
 
 .logo img {
     width: 80%;
-    vertical-align: middle;    
+    vertical-align: middle;
 }
 
 
@@ -62,7 +62,7 @@ header {
 /* nav */
 nav {
     width: 100%;
-   
+
 }
 
 nav::before {
@@ -123,12 +123,18 @@ header:hover :before {
 /* 배너 */
 .banner .slide {
     width: 100%;
-    height:  calc(100vh - 100px);
+    height: calc(100vh - 100px);
 }
 
-.bx-controls-direction{display: none;}
-.bx-pager{display: none;}
-.banner .slide_wrap img{
+.bx-controls-direction {
+    display: none;
+}
+
+.bx-pager {
+    display: none;
+}
+
+.banner .slide_wrap img {
     width: 100%;
     height: calc(100vh - 100px);
 }
@@ -171,6 +177,7 @@ main .s1 .selectomenu2 {
     width: 100%;
     padding: 14rem 10rem;
     background: var(--background);
+    position: relative;
 }
 
 main .s1 .selectomenu2 h2 {
@@ -193,41 +200,20 @@ main .s1 .selectomenu2 .cf_img img {
     flex-direction: column;
 }
 
-.selectomenu2 .beverage {
-    opacity: 0;
-}
-
-.selectomenu2 .coffee {
-    opacity: 0;
-}
-
-.selectomenu2 .cookie {
-    opacity: 0;
+.beverage,
+.coffee,
+.cookie,
+.topping2,
+.topping3,
+.topping4 {
+    display: none;
 }
 
 
-main .s1 .selectomenu2 .cf_img_box2 {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 0;
-}
 
-main .s1 .selectomenu2 .cf_img_box3 {
-    display: flex;
-    justify-content: space-evenly;
-    /* padding: 2rem 2rem 1rem; */
-    padding: 2rem 0;
-}
-
-main .s1 .selectomenu2 .cf_img_box4 {
-    display: flex;
-    justify-content: space-evenly;
-    /* padding: 2rem 2rem 1rem; */
-    padding: 2rem 0;
-}
-
-.topping{
+.topping {
     width: 100%;
+    position: relative;
 }
 
 .topping p {
@@ -242,37 +228,23 @@ main .s1 .selectomenu2 .cf_img_box5 {
     justify-content: space-between;
     padding: 2rem 0;
 }
-.cf_img_box5{width: 80%;}
+
+.cf_img_box5 img {
+    width: 80%;
+}
 
 .cf_img_box5 li a {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     text-align: center;
     align-items: center;
 }
 
 .cf_img_box5 li a .syreop {
-    width: 3rem;
+    width: 8rem;
     height: 3rem;
-    background: no-repeat center center/cover;
-    padding: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.cf_img_box5 li:nth-child(1) a .syreop {
-    background-image: url(../images/c-topping-01.png);
-}
-
-.cf_img_box5 li:nth-child(2) a .syreop {
-    background-image: url(../images/c-topping-02.png);
-}
-
-.cf_img_box5 li:nth-child(3) a .syreop {
-    background-image: url(../images/c-topping-03.png);
-}
-
-.cf_img_box5 li:nth-child(4) a .syreop {
-    background-image: url(../images/c-topping-04.png);
+    padding: 0.5rem;
+    margin-bottom: 5rem;
 }
 
 
@@ -285,11 +257,11 @@ main .s2 h2 {
     padding: 1rem;
 }
 
-main .s3 .cf_img {    
-    background: url(../images/m-3rd_sec-bg.jpg);   
+main .s3 .cf_img {
+    background: url(../images/m-3rd_sec-bg.jpg);
     height: 100vh;
     max-width: 100%;
-   background-size: cover ;    
+    background-size: cover;
 }
 
 
@@ -305,7 +277,7 @@ main .row {
 }
 
 main .row .left {
-    width: 40%;    
+    width: 40%;
     border-right: 1px solid #d7d5d5;
 }
 
@@ -319,9 +291,10 @@ main .row .left h2 {
 
 main .row .right {
     position: absolute;
-    right: 0;   
-    width: 60%; 
-    padding: 1rem 0;  
+    right: 0;
+    width: 60%;
+    margin: 3rem -8rem;
+    line-height: 4rem;
 }
 
 main .row .right .textbox1 {
@@ -329,6 +302,39 @@ main .row .right .textbox1 {
     display: flex;
     flex-direction: column;
 }
+
+.cf_img2_1 {
+    position: relative;
+}
+
+.cf_img2_1 img {
+    position: absolute;
+    top: -193px;
+    right: 288px;
+    opacity: 0;
+}
+.textbox1:hover .cf_img2_1 img{opacity: 1;}
+
+
+.cf_img2_1 .arrow{position: relative;}
+.cf_img2_1 .arrow img{
+    position: absolute;
+    top: -90px;
+    right: 152px;
+}
+
+
+.e1 a {
+    color: var(--secondary);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.e2 a {
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
 main .row .right .textbox2 {
     height: 163px;
     display: flex;
@@ -340,7 +346,16 @@ main .textbox span {
     flex-direction: column;
     margin: 20px;
 }
-main .s3 .any li{width: 100%; display: flex;  text-align: center; align-items: center; padding: 2rem; font-size: 4rem;}
+
+main .s3 .any li {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 3rem;
+    letter-spacing: -0.5px;
+}
 
 
 main .s4 {
@@ -461,6 +476,14 @@ footer .fx .mid li:not(:last-child):before {
     right: 0%;
     top: 50%;
     transform: translateY(-40%);
+}
+.footer_top{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    position: relative;
+    right: 0;    
 }
 
 /* 팝업 */

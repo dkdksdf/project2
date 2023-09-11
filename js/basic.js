@@ -1,14 +1,13 @@
 $('.slide_wrap').bxSlider({
     mode: 'horizontal',
-    speed: 500,
+    speed: 300,
     auto: true,
     autoHover: true,
 })
 $('.bxslider').bxSlider({
-    minSlides: 4,
-    maxSlides: 4,
-    slideWidth: 170,
-    slideMargin: 10,
+    minSlides: 3,
+    maxSlides: 3,
+    slideWidth:800,
     ticker: true,
     speed: 9000
   });
