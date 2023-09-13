@@ -15,30 +15,25 @@ ul {
 }
 
 header {
+    padding: 0 10rem;
     height: 100px;
+    justify-content: center;
     line-height: 100px;
-    position: relative;
+    display: flex;
 }
 
-.logo {
-    position: absolute;
-    top: 10px;
+.logo img {
+    width: 80%;
+    vertical-align: middle;
 }
 
-.sns {
-    right: 117px;
-}
+
 
 .sns_section {
-    position: absolute;
+    min-width: 20rem;
     display: flex;
     justify-content: space-between;
-    top: 1.875rem;
-    right: 1.875rem;
-    z-index: 30;
-    width: auto;
-    border-bottom: 0;
-    border-bottom: none;
+    align-items: center;
 }
 
 .sns_list {
@@ -67,11 +62,12 @@ header {
 /* nav */
 nav {
     width: 100%;
-    background: var(--background);
+
 }
 
 nav::before {
     content: '';
+    left: 0;
     top: 100px;
     width: 100%;
     position: absolute;
@@ -125,157 +121,162 @@ header:hover :before {
 
 
 /* 배너 */
-.banner .slide {    
-    height: 100vh;
-}
-
-.banner .slide_wrap {    
-    display: flex;
-}
-
-.banner .slide_wrap li {
-    position: absolute;
+.banner .slide {
     width: 100%;
-    height: 100%;
-    opacity: 1;
-    background: #fff no-repeat center center/cover;
-    transition: all 0.3s ease-in-out;
+    height: calc(100vh - 100px);
 }
 
-.banner .slide_wrap li.slide1 {
-    background: url(../images/eleonora-gaini-xom4ykz-WIg-unsplash.jpg);
+.bx-controls-direction {
+    display: none;
 }
 
-.banner .slide_wrap li.slide2 {
-    background: url(../images/kuno-schweizer-kEtPOggwBl0-unsplash.jpg);
+.bx-pager {
+    display: none;
 }
 
-.banner .slide_wrap li.slide3 {
-    background: url(../images/the-cleveland-museum-of-art-z1L9sQPtroE-unsplash.jpg);
+.banner .slide_wrap img {
+    width: 100%;
+    height: calc(100vh - 100px);
 }
-
-.banner .slide_wrap li.slide4 {
-    background: url(../images/nati-melnychuk-cCnDAkIDJ98-unsplash.jpg);
-}
-
 
 /* 메인 */
 main .s1 {
-	height: 100vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -2px;
 }
 
+main section.menu {
+    position: relative;
+}
+
+main section.menu .menu_img {
+    position: absolute;
+    width: 30vw;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+main section.menu .menu_img img {
+    width: 80%;
+}
 
 main .s1 .selectomenu1 {
     width: 100%;
-    height: 500px;
-    color: #fff;
-    background: url(../images/c-signature-bg-1.jpg) no-repeat center center/cover;
+    color: #fff;    
     padding: 10rem;
+    background: url(../images/c-signature-bg-1.jpg)no-repeat center center/cover;
 }
+
 
 main .s1 .selectomenu1 h2 {
     font-size: 7rem;
     font-weight: bold;
-    /* margin-top: -76px; */
+}
+
+main .s1 .selectomenu1 ul {
+    margin-top: 40px;
 }
 
 main .s1 .selectomenu1 ul li a {
     color: #fff;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
+    line-height: 7rem;
+
 }
 
 main .s1 .selectomenu2 {
     width: 100%;
-    height: 500px;
+    padding: 14rem 22rem;
     background: var(--background);
+    position: relative;
 }
 
 main .s1 .selectomenu2 h2 {
     font-size: 4rem;
     font-weight: bold;
-    text-align: center;
-    align-items: center;
-    padding: 0.5rem;
+    margin-left: 46px;
 }
 
 main .s1 .selectomenu2 p {
     font-size: 2rem;
-    text-align: center;
-    padding: 0.5rem;
+    margin-top: 40px;
+    margin-left: 46px;
 }
 
 main .s1 .selectomenu2 .cf_img_box1 {
     display: flex;
+    margin-left: 30px;
 }
 
 main .s1 .selectomenu2 .cf_img img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     flex-direction: column;
+
 }
 
-.selectomenu2 .beverage {
-    opacity: 0;
+.beverage,
+.coffee,
+.cookie {
+    display: none;
+}
+.topping2,
+.topping3,
+.topping4
+{
+    display: none;
 }
 
-.selectomenu2 .coffee {
-    opacity: 0;
+.c2,
+.c3,
+.c4 {
+    display: none;
 }
 
-.selectomenu2 .cookie {
-    opacity: 0;
+
+
+.topping {
+    width: 100%;
+    position: relative;
 }
 
+.topping p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 5rem;
+    border-bottom: 2px solid var(--primary);
+}
 
-main .s1 .selectomenu2 .cf_img_box2 {
+main .s1 .selectomenu2 .cf_img_box5 {
     display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 2rem 1rem;
+    justify-content: space-between;
+    padding: 2rem 49px;
 }
 
-main .s1 .selectomenu2 .cf_img_box3 {
+.cf_img_box5 img {
+    width: 80%;
+}
+
+.cf_img_box5 li a {
     display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 2rem 1rem;
-}
-
-main .s1 .selectomenu2 .cf_img_box4 {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 2rem 1rem;
-}
-
-.cf_img_box2 li a {
-    display: block;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
-.cf_img_box2 li a .syreop {
-    width: 3.2rem;
-    height: 3.2rem;
-    background: no-repeat center center/cover;
-    padding: 1rem;
+.cf_img_box5 li a .syreop {
+    width: 8rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-bottom: 5rem;
 }
 
-.cf_img_box2 li:nth-child(1) a .syreop {
-    background-image: url(../images/c-topping-01.png);
-}
-
-.cf_img_box2 li:nth-child(2) a .syreop {
-    background-image: url(../images/c-topping-02.png);
-}
-
-.cf_img_box2 li:nth-child(3) a .syreop {
-    background-image: url(../images/c-topping-03.png);
-}
-
-.cf_img_box2 li:nth-child(4) a .syreop {
-    background-image: url(../images/c-topping-04.png);
-}
 
 
 
@@ -287,16 +288,13 @@ main .s2 h2 {
 }
 
 main .s3 .cf_img {
-    position: relative;
-    width: 100%;
-    height: 500px;
+    background: url(../images/m-3rd_sec-bg.jpg);
+    height: 100vh;
+    max-width: 100%;
+    background-size: cover;
 }
 
-main .s3 .cf_img img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+
 
 
 
@@ -305,11 +303,12 @@ main .row {
     position: relative;
     width: 100%;
     height: 490px;
+    border: 1px solid #d7d5d5;
 }
 
 main .row .left {
     width: 40%;
-    border: 1px solid #d7d5d5;
+    border-right: 1px solid #d7d5d5;
 }
 
 main .row .left h2 {
@@ -323,13 +322,34 @@ main .row .left h2 {
 main .row .right {
     position: absolute;
     right: 0;
-    flex-direction: column;
     width: 60%;
-    height: 490px;
+    margin: 3rem -8rem;
+    line-height: 4rem;
 }
 
-main .row .right .textbox {
-    border: 1px solid #d7d5d5;
+main .row .right .textbox1 {
+    height: 163px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.e1 a {
+    color: var(--secondary);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.e2 a {
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+main .row .right .textbox2 {
+    height: 163px;
+    display: flex;
+    flex-direction: column;
 }
 
 main .textbox span {
@@ -337,6 +357,17 @@ main .textbox span {
     flex-direction: column;
     margin: 20px;
 }
+
+main .s3 .any li {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    font-size: 3rem;
+    letter-spacing: -0.5px;
+}
+
 
 main .s4 {
     display: flex;
@@ -458,6 +489,15 @@ footer .fx .mid li:not(:last-child):before {
     transform: translateY(-40%);
 }
 
+.footer_top {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50px;
+    position: relative;
+    right: 0;
+}
+
 /* 팝업 */
 .popup h2 {
     position: fixed;
@@ -468,4 +508,5 @@ footer .fx .mid li:not(:last-child):before {
     font-size: 1rem;
     top: 50%;
     left: 35%;
+    display: none;
 }
