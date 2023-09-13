@@ -32,7 +32,7 @@ header {
 .sns_section {
     min-width: 20rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
