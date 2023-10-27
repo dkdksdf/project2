@@ -6,16 +6,13 @@ const msg = $('.menu_img>img');
 tabBtn.on('click', function (e) {
     e.preventDefault();
     let tg = $(this).index();
-    tabBtn.removeClass('on');
-    tabBtn.eq(tg).addClass('on');
-
-    toppongs.hide();
-    toppongs.eq(tg).show();
-
-    panels.hide();
-    panels.eq(tg).show();
-
-    msg.hide();
-    msg.eq(tg).show();
-
+    tabBtn.removeClass('on').eq(tg).addClass('on');
+    toppongs.hide().eq(tg).show();
+    panels.hide().eq(tg).show();
+    msg.hide().eq(tg).show();
 });
+
+$('a[href="#"]').on('click', function(e) {
+    e.preventDefault();
+});
+
