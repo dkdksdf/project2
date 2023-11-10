@@ -12,6 +12,13 @@ tabBtn.on('click', function (e) {
     msg.hide().eq(tg).show();
 });
 
+$('.popup').show();
+//팝업 구현
+$('.close').on('click', function (e) {
+	e.preventDefault();
+	$('.popup').hide();
+});
+
 $('a[href="#"]').on('click', function(e) {
     e.preventDefault();
 });
