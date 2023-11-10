@@ -38,7 +38,7 @@ nav::before { content: ''; left: 0; top: 100px; width: 100%; position: absolute;
 
 .gnb:hover .sub { height: inherit; } 
 
-header:hover :before { height: 350px; } 
+header:hover :before {content: ''; height: 350px; } 
 
 /* 배너 */
 .banner .slide { width: 100%; height: calc(100vh - 100px); } 
